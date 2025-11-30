@@ -1,0 +1,14 @@
+name: Test Custom Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: [self-hosted-custom]
+    
+    steps:
+      - name: Echo test
+        run: |
+          echo "Running on custom runner!"
+          hostname
